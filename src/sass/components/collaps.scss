@@ -1,0 +1,45 @@
+.collapsContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Montserrat";
+   
+    .headCollaps {
+       display: flex;
+       justify-content: space-between;
+       border-radius: 5px;
+       background-color: #ff6060;
+       color: white;
+       width: 70%;
+       height: 25px;
+       padding: 10px;
+       cursor: pointer;
+       
+       
+   
+       .arrow {
+        transition: transform 315ms ease-in-out;
+       }
+       
+       .arrow.open {
+        transform: rotate(-180deg);
+       }
+       
+    }
+   
+    .headCollapsContent {
+      display: flex;
+      align-items: center;
+      width: 80%;
+      overflow: hidden; // Cache le contenu jusqu'à ce qu'il soit ouvert
+      max-height: 0; // Commence avec une hauteur minimale
+      transition: max-height 315ms ease ;// Ajoute une transition pour l'effet de glissement
+     &.open {
+      max-height: 200px;
+      transition: max-height 1s ease // Hauteur maximale avant de passer à une hauteur dynamique
+     }
+    }
+     
+     
+  
+   }

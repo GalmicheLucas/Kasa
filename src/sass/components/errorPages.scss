@@ -1,0 +1,36 @@
+.errorPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Montserrat";
+    color: #ff6060;
+  
+    h1 {
+      display: flex;
+      justify-content: center;
+      font-size: 18rem;
+      padding-top: 230px;
+      margin: 0;
+      @media screen and (max-width: 768px) {
+        font-size: 8rem;
+      }
+    }
+    p {
+      display: flex;
+      justify-content: center;
+      font-size: 2rem;
+      padding-bottom: 90px;
+      font-weight: 500;
+      @media screen and (max-width: 768px) {
+        font-size: 1.3rem;
+        padding-left: 65px;
+        padding-right: 30px;
+      }
+    }
+    li {
+      font-weight: 500;
+      padding-bottom: 90px;
+      list-style: none;
+      color: black;
+    }
+  }

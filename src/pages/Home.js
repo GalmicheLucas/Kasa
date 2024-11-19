@@ -1,5 +1,6 @@
 import React from 'react'
-import Banner, { HomePage } from '../components/Banner';
+import Banner from '../components/Banner';
+import Gallery from '../components/Gallery';
 
 function Home() {
   return (

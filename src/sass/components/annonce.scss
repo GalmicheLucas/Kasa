@@ -1,0 +1,30 @@
+.annonce {
+    position: relative;
+  
+    &__image {
+      width: 340px;
+      height: 340px;
+      border-radius: 15px;
+      object-fit: cover;
+      filter: brightness(0.7); // Assombrir légèrement l'image pour faire ressortir le texte
+    }
+  
+    &__info {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      color: white;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    }
+  
+    &__title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  
+    &__price {
+      font-size: 1.2rem;
+      margin-top: 5px;
+    }
+  }
+  

@@ -1,0 +1,38 @@
+.banner{
+    position: relative;
+    max-width: 100vw;
+    padding-inline: 0 32px;
+    background-image: url("../../images/home_cover.png");
+    background-size: cover; /* Assure que l'image couvre tout l'espace */
+    background-position: center; /* Centre l'image dans le conteneur */
+    background-repeat: no-repeat; /* Évite les répétitions de l'image */
+    margin: auto;
+    height: 223px;
+    width: 1240px;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    color: white;   
+}
+
+.banner::after{
+    position: absolute;
+    border-radius: 15px;
+    content: "";
+    inset: 0;
+    color: black;
+    opacity:0.5; 
+}
+
+.banner-about{
+    position: relative;
+    max-width: 100vw;
+    padding-inline: 0 32px;
+    background-image: url("../../images/about_cover.png");
+    background-size: cover; /* Assure que l'image couvre tout l'espace */
+    margin: auto;
+    height: 223px;
+    width: 1240px;
+    border-radius: 15px;
+   
+}

@@ -1,0 +1,20 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    margin-top: auto;
+    img {
+      margin: 15px 0 15px 0;
+    }
+    h3 {
+      font-family: "Montserrat";
+      font-weight: 500;
+      font-size: 20px;
+      @media screen and (max-width:768px) {
+          font-size: 14px;
+      }
+    }
+  }

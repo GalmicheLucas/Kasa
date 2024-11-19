@@ -1,0 +1,45 @@
+Header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 135px;
+    
+    img{
+        height: 70px;
+        @media screen and (max-width: 768px){
+            height: 55px;
+          }
+          @media screen and (max-width: 425px){
+            height: 40px;
+          }
+          @media screen and (max-width: 320px){
+            height: 35px;
+          }
+    }
+    nav{
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            a{
+                text-decoration: none;
+                color:black;
+                font-size: 20px;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 500;
+                &.underline{
+                    text-decoration: underline;
+                }
+                @media screen and (max-width: 460px){
+                    font-size: 14px;
+                  }
+            }
+            li{
+                margin: 0 10px;
+                list-style: none;
+            }
+        }
+        
+    }
+}
