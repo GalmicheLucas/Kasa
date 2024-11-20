@@ -4,7 +4,7 @@ import leftArrow from "../images/chevron_carousel_left.png"
 import rightArrow from "../images/chevron_carousel_right.png"
 import React from 'react'
 
-const Slideshow({ slides}) => {
+function Slideshow ({ slides })  {
 
     const [currentIndex, setCurrentIndex] = useState(0);
 

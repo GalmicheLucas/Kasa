@@ -1,15 +1,17 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import "../sass/components/annonce.scss"
 
-function Annonce({ nom, prix, image }) {
+function Annonce({ nom, id, image }) {
   return (
-    <div className="annonce">
+    // liens logements
+    <Link to={`/logement/${id}`} className="annonce">
       <img src={image} alt={nom} className="annonce__image" />
       <div className="annonce__info">
         <h3 className="annonce__title">{nom}</h3>
-        <p className="annonce__price">{prix}</p>
+        
       </div>
-    </div>
+    </Link>
   );
 }
 
