@@ -10,7 +10,7 @@ import './App.css';
 
 function App() {
   return (
-    <BrowserRouter> {/* Utilisation du BrowserRouter pour gérer les routes de l'application. */}
+    <BrowserRouter>  {/* Utilisation du BrowserRouter pour gérer les routes de l'application. */}
     <div className='AppContainer'>
       <Header />
       <div className='content'>

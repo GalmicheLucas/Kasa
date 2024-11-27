@@ -6,6 +6,7 @@ function Annonce({ nom, id, image }) {
   return (
     // liens logements
     <Link to={`/logement/${id}`} className="annonce">
+
       <img src={image} alt={nom} className="annonce__image" />
       <div className="annonce__info">
         <h3 className="annonce__title">{nom}</h3>
@@ -13,6 +14,8 @@ function Annonce({ nom, id, image }) {
       </div>
     </Link>
   );
+  
 }
+
 
 export default Annonce;

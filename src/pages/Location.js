@@ -1,5 +1,5 @@
-import React from 'react';
-import LocationPages from '../components/LocationPages';
+import React from 'react'
+import LocationPages from '../components/LocationPages'
 
 function Location() {
   return (

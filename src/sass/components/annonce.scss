@@ -1,6 +1,10 @@
 .annonce {
     position: relative;
   
+    @media screen and (max-width: 768px) {
+      width:335px ;
+    }
+
     &__image {
       width: 340px;
       height: 340px;

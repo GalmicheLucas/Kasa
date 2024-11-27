@@ -1,80 +1,72 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
+import "../sass/components/location.scss";
 
-// Import des données des logements
-import data from "../data/logements";
-// Import du composant Collaps
+import Rating from './Rating';
 import Collaps from "../components/Collaps";
-// Import du composant Slideshow pour le carousel d'images
 import Slideshow from './Slideshow';
+import Tags from "../components/Tags";
+import data from "../data/logements";
+
+const findLocationByID = (id) => data.find((location) => String(location.id) === String(id));
 
 const LocationPages = () => {
-  // Récupération de l'ID depuis les paramètres de l'URL
   const { id } = useParams();
+  const navigate = useNavigate();
 
-  // Fonction pour trouver un logement par son ID
-  const findLocationByID = (id) => data.find((location) => location.id === id);
-
-  // Récupération des données du logement par son ID
+  // Recherche de la location correspondante
   const location = findLocationByID(id);
 
+  // Redirection en cas de données invalides
   if (!location) {
-    // Redirection vers "/error" si aucun logement n'est trouvé
-    window.location.href = "/error";
-    return null; // Retourne null pour ne rien afficher
+    console.error(`Location not found for ID: ${id}`);
+    navigate("/error");
+    return null;
+  }
+
+  // Vérification des données essentielles
+  const { pictures, host, title, location: place, tags, rating, description, equipments } = location;
+  if (!pictures || !host) {
+    console.error("Missing pictures or host data:", location);
+    navigate("/error");
+    return null;
   }
 
   return (
     <div className="locationPage">
-      {/* Slide pour afficher les images de l'emplacement */}
-      <Slideshow slides={location.pictures} />
+      {/* Carousel d'images */}
+      <Slideshow slides={pictures} />
 
-      {/* Conteneur pour toutes les infos */}
+      {/* Conteneur des infos */}
       <div className="locationAllInfo">
-        {/* Section pour les infos principales */}
+        {/* Titre et emplacement */}
         <div className="locationMainInfo">
-          {/* Titre, lieu et Tags de l'emplacement */}
           <div className="locationTitlePlace">
-            {/* Titre */}
-            <h2>{location.title}</h2>
-            {/* Lieu */}
-            <h3>{location.location}</h3>
-            {/* Tags */}
-            <div className="containerTags">
-              {location.tags.map((tag, index) => (
-                <span key={index} className="tag">
-                  {tag}
-                </span>
-              ))}
-            </div>
+            <h2>{title}</h2>
+            <h3>{place}</h3>
+            <Tags tags={tags} />
           </div>
         </div>
 
-        {/* Section pour l'hôte et sa note */}
+        {/* Hôte et note */}
         <div className="hostRating">
-          {/* Nom de l'hôte et sa photo */}
           <div className="host">
-            <h3>{location.host.name}</h3>
-            <img src={location.host.picture} alt={`Hôte: ${location.host.name}`} />
+            <h3>{host.name}</h3>
+            <img src={host.picture} alt={`Hôte: ${host.name}`} />
           </div>
-
-          {/* Affiche la note de l'emplacement */}
           <div className="rating">
-            {/* Implémentation du composant Rating à ajouter */}
-            {/* Exemple : <Rating value={location.rating} /> */}
+            <Rating value={rating} />
           </div>
         </div>
 
-        {/* Sections avec les infos supplémentaires */}
+        {/* Informations supplémentaires */}
         <div className="locationSideInfo">
           <Collaps title="Description">
-            <p>{location.description}</p>
+            <p>{description}</p>
           </Collaps>
-
-          {/* Équipements */}
           <Collaps title="Équipements">
             <ul>
-              {location.equipments.map((equip, index) => (
-                <li key={index}>{equip}</li>
+              {equipments?.map((equip) => (
+                <li key={equip}>{equip}</li>
               ))}
             </ul>
           </Collaps>

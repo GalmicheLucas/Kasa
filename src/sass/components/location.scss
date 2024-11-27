@@ -1,0 +1,202 @@
+.locationPage {
+    font-family: "Montserrat";
+    .carousel {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
+      overflow: hidden;
+      button {
+        display: contents;
+      }
+      .previous,
+      .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1;
+      }
+  
+      .previous {
+        left: 35px;
+        @media screen and (max-width: 768px) {
+          width: 30px;
+        }
+        @media screen and (max-width: 425px) {
+          width: 20px;
+          left: 25px;
+        }
+      }
+  
+      .next {
+        right: 35px;
+        @media screen and (max-width: 768px) {
+          width: 30px;
+        }
+        @media screen and (max-width: 425px) {
+          width: 20px;
+          right: 25px;
+        }
+      }
+      .slideNumber {
+        position: absolute;
+        bottom: 10px;
+        color: white;
+        font-size: 18px;
+      }
+      
+    }
+    img {
+      border-radius: 15px;
+  
+      object-fit: cover;
+    }
+    .carouselImage {
+      width: 100%;
+      height: 415px;
+    }
+  }
+  .locationTitlePlace {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    @media screen and (max-width: 768px) {
+      left: 15px;
+    }
+  
+    h2 {
+      color: #ff6060;
+      font-weight: 500;
+      font-size: 36px;
+      margin: 0;
+      @media screen and (max-width: 768px) {
+        font-size: 26px;
+      }
+    }
+    h3 {
+      font-weight: 500;
+      font-size: 18px;
+      margin: 8px 0 25px 0;
+      @media screen and (max-width: 768px) {
+        font-size: 20px;
+      }
+    }
+    .containerTags {
+      @media screen and (max-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+  
+      .tags {
+        background-color: #ff6060;
+        font-weight: 700;
+        font-size: 14px;
+        color: white;
+        padding: 5px 15px 5px 15px;
+        margin-right: 10px;
+        border-radius: 7px;
+        @media screen and (max-width: 768px) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  
+  .locationMainInfo {
+    // border: 1px solid pink;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding-top: 25px;
+    padding-bottom: 35px;
+    @media screen and (max-width: 768px) {
+      display: block;
+      padding-bottom: 0px;
+    }
+    .hostRating {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: end;
+      @media screen and (max-width: 768px) {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+    .host {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      margin-bottom: 25px;
+  
+      h3 {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 18px;
+        color: #ff6060;
+        width: 35%;
+  
+        @media screen and (max-width: 768px) {
+          font-size: 19px;
+        }
+      }
+      img {
+        border-radius: 50%;
+        width: 28%;
+        @media screen and (max-width: 768px) {
+          width: 24%;
+        }
+      }
+    }
+    .rating {
+      margin-right: -3px;
+      margin-bottom: -5px;
+      @media screen and (max-width: 768px) {
+        margin: 0;
+        position: unset;
+      }
+    }
+  }
+  
+  .locationSideInfo {
+    display: flex;
+    gap: 70px;
+    padding-right: 20px;
+  
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 0;
+    }
+  
+    .collapsContent {
+      width: 100%;
+      align-items: flex-start;
+      margin-bottom: 50px;
+  
+      .headCollaps {
+        width: 100%;
+        margin: 0;
+        
+      }
+      li {
+        list-style: none;
+      }
+      p {
+        display: contents;
+      }
+      ul {
+        padding: 0;
+        margin: 0;
+      }
+      .headCollapsContent {
+        margin-top: 15px;
+        margin-left: 15px;
+      }
+    }
+  }

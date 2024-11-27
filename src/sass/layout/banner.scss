@@ -1,38 +1,33 @@
-.banner{
-    position: relative;
+.banner {
+    position: relative; /* Nécessaire pour le positionnement des enfants */
     max-width: 100vw;
     padding-inline: 0 32px;
     background-image: url("../../images/home_cover.png");
-    background-size: cover; /* Assure que l'image couvre tout l'espace */
-    background-position: center; /* Centre l'image dans le conteneur */
-    background-repeat: no-repeat; /* Évite les répétitions de l'image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     margin: auto;
     height: 223px;
     width: 1240px;
     border-radius: 15px;
+    filter: brightness(0.7); /* Appliqué au fond uniquement */
     display: grid;
     place-items: center;
-    color: white;   
+    overflow: hidden; /* Évite les débordements */
 }
 
-.banner::after{
+.banner h1 {
+    color: white;
+    position: relative; /* Nécessaire pour que le z-index fonctionne */
+    z-index: 2; /* Devant le pseudo-élément */
+}
+
+.banner::after {
     position: absolute;
     border-radius: 15px;
     content: "";
     inset: 0;
-    color: black;
-    opacity:0.5; 
-}
-
-.banner-about{
-    position: relative;
-    max-width: 100vw;
-    padding-inline: 0 32px;
-    background-image: url("../../images/about_cover.png");
-    background-size: cover; /* Assure que l'image couvre tout l'espace */
-    margin: auto;
-    height: 223px;
-    width: 1240px;
-    border-radius: 15px;
-   
+    background: black; /* Remplace "color" par "background" */
+    opacity: 0.5; /* Semi-transparent */
+    z-index: 1; /* Derrière le texte */
 }

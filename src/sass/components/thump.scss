@@ -1,4 +1,5 @@
 .gallery {
+  
   gap: 30px;
   display: flex;
   justify-content: center;
@@ -8,7 +9,15 @@
   border-radius: 25px;
   align-items: center;
   margin: 40px 135px;
+@media screen and (max-width: 1024px) {
+ 
+  margin: auto;
 }
+
+
+}
+
+
 
 .annonce-card {
   width: 31%;
