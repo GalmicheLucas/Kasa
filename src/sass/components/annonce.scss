@@ -2,7 +2,7 @@
     position: relative;
   
     @media screen and (max-width: 768px) {
-      width:335px ;
+      width: auto ;
     }
 
     &__image {
@@ -11,6 +11,9 @@
       border-radius: 15px;
       object-fit: cover;
       filter: brightness(0.7); // Assombrir légèrement l'image pour faire ressortir le texte
+
+
+     
     }
   
     &__info {

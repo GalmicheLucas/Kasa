@@ -11,7 +11,7 @@ const findLocationByID = (id) => data.find((location) => String(location.id) ===
 
 const LocationPages = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
+  let navigate = useNavigate();
 
   // Recherche de la location correspondante
   const location = findLocationByID(id);
@@ -24,7 +24,7 @@ const LocationPages = () => {
   }
 
   // Vérification des données essentielles
-  const { pictures, host, title, location: place, tags, rating, description, equipments } = location;
+  const { pictures, host, title, location: tags, rating, description, equipments } = location;
   if (!pictures || !host) {
     console.error("Missing pictures or host data:", location);
     navigate("/error");
@@ -42,8 +42,16 @@ const LocationPages = () => {
         <div className="locationMainInfo">
           <div className="locationTitlePlace">
             <h2>{title}</h2>
-            <h3>{place}</h3>
-            <Tags tags={tags} />
+              {/* Lieu de l'emplacement */}
+              <h3>{location}</h3>
+            {/* Affichage des tags de l'emplacement */}
+            <div className="containerTags">
+              {/* Boucle pour chaque tag */}
+              {location.tags.map((tag, index) => (
+                // Utilisation du composant Tags avec le texte du tag
+                <Tags key={index} text={tags} />
+              ))} 
+              </div>
           </div>
         </div>
 
@@ -54,7 +62,8 @@ const LocationPages = () => {
             <img src={host.picture} alt={`Hôte: ${host.name}`} />
           </div>
           <div className="rating">
-            <Rating value={rating} />
+            {/* Convertit la chaîne de caractères représentant la note en un nombre entier */}
+            <Rating rating={parseInt(rating, 10)} />
           </div>
         </div>
 

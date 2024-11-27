@@ -5,7 +5,7 @@ import "../sass/components/annonce.scss"
 function Annonce({ nom, id, image }) {
   return (
     // liens logements
-    <Link to={`/logement/${id}`} className="annonce">
+    <Link to={`/location/${id}`} className="annonce">
 
       <img src={image} alt={nom} className="annonce__image" />
       <div className="annonce__info">

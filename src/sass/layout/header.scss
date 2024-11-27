@@ -3,11 +3,15 @@ Header{
     justify-content: space-between;
     align-items: center;
     margin: 30px 135px;
-    
+    @media screen and (max-width: 1024px) {
+       justify-content: flex-end;
+       }
+
+
     img{
         height: 70px;
         @media screen and (max-width: 768px){
-            height: 55px;
+            height: 40px;
           }
           @media screen and (max-width: 425px){
             height: 40px;

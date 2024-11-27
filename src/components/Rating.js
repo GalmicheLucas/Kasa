@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import starFull from "../images/red_star.png";
 import starEmpty from "../images/grey_star.png";
+import "../sass/components/location.scss";
 
 import React from 'react'
 
