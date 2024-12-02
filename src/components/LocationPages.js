@@ -24,7 +24,7 @@ const LocationPages = () => {
   }
 
   // Vérification des données essentielles
-  const { pictures, host, title, location: tags, rating, description, equipments } = location;
+  const { pictures, host, title, location: place, tags, rating, description, equipments } = location;
   if (!pictures || !host) {
     console.error("Missing pictures or host data:", location);
     navigate("/error");
@@ -41,17 +41,17 @@ const LocationPages = () => {
         {/* Titre et emplacement */}
         <div className="locationMainInfo">
           <div className="locationTitlePlace">
+            {/* Titre de l'emplacement */}
             <h2>{title}</h2>
-              {/* Lieu de l'emplacement */}
-              <h3>{location}</h3>
-            {/* Affichage des tags de l'emplacement */}
-            <div className="containerTags">
-              {/* Boucle pour chaque tag */}
-              {location.tags.map((tag, index) => (
-                // Utilisation du composant Tags avec le texte du tag
-                <Tags key={index} text={tags} />
-              ))} 
-              </div>
+            {/* Lieu de l'emplacement */}
+            <h3>{place}</h3>
+            {/* Affichage des tags */}
+            <div className="tags">
+          {tags?.map((tag, index) => (
+            <Tags key={index} text={tag} />
+          ))}
+        </div>
+
           </div>
         </div>
 
@@ -62,7 +62,6 @@ const LocationPages = () => {
             <img src={host.picture} alt={`Hôte: ${host.name}`} />
           </div>
           <div className="rating">
-            {/* Convertit la chaîne de caractères représentant la note en un nombre entier */}
             <Rating rating={parseInt(rating, 10)} />
           </div>
         </div>

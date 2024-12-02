@@ -2,15 +2,12 @@
     position: relative;
     max-width: 100vw;
     padding-inline: 0 32px;
-    background-image: url("../../images/home_cover.png");
     background-size: cover; /* Assure que l'image couvre tout l'espace */
     background-position: center; /* Centre l'image dans le conteneur */
     background-repeat: no-repeat; /* Évite les répétitions de l'image */
     margin: auto;
     height: 223px;
     width: 1240px;
-    border-radius: 15px;
-    filter: brightness(0.7);
     display: grid;
     place-items: center;
        
@@ -18,11 +15,17 @@
     width: auto;
     margin: 0px 15px;
 }
- 
+
+ }
+
+ .banner img {
+border-radius: 15px;
+filter: brightness(0.5);
+
  }
  .banner h1 {
     color: white;
-    position: relative; /* Important pour que le z-index fonctionne */
+    position: absolute; /* Important pour que le z-index fonctionne */
     z-index: 1; /* Devant */
 }
 
