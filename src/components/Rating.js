@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 import starFull from "../images/red_star.png";
 import starEmpty from "../images/grey_star.png";
-import "../sass/components/location.scss";
 
-import React from 'react'
+// Définition du composant Rating avec une prop "rating"
+const Rating = ({ rating }) => {
+  // Définition du nombre total d'étoiles
+  const totalStars = 5;
 
-function Rating({rating}) {
-
-    const totalStars = 5;
+  // Retourne le composant d'évaluation
   return (
     <div className="rating">
       {/* Boucle pour créer chaque étoile */}
@@ -22,12 +22,13 @@ function Rating({rating}) {
         />
       ))}
     </div>
-  )
-}
+  );
+};
 
 // Définition du type de la prop "rating" comme un nombre requis
 Rating.propTypes = {
-    rating: PropTypes.number.isRequired,
-  };
+  rating: PropTypes.number.isRequired,
+};
 
-export default Rating
+// Export du composant Rating
+export default Rating;

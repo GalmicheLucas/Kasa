@@ -4,7 +4,7 @@ import "../sass/components/location.scss";
 const Tags = ({ text }) => {
   console.log("Tag text:", text); // Débogage
   return (
-    <span className="tags">{text}</span>
+    <h2 className="tags">{text}</h2>
   );
 };
 
