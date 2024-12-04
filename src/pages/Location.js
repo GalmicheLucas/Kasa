@@ -24,7 +24,11 @@ const Location = () => {
   }
 
   // Vérification des données essentielles
-  const { pictures, host, title, location: tags, rating, description, equipments } = location;
+  const { pictures, host, title, location: place, tags, rating, description, equipments } = location;
+
+  const name = location.host.name.split(' ');
+  console.log(name);
+
   if (!pictures || !host) {
     console.error("Missing pictures or host data:", location);
     navigate("/error");
@@ -41,23 +45,33 @@ const Location = () => {
         {/* Titre et emplacement */}
         <div className="locationMainInfo">
           <div className="locationTitlePlace">
-            <h2>{title}</h2>
-            
-            <Tags tags={tags} />
-          </div>
-        </div>
+            <h2>{title} </h2>
+		        <h3>{place}</h3>
+            <div className="tags">
+        {tags.length > 0 ? (
+         tags.map((tag, index) => <Tags key={index} text={tag} />)
+             ) : (
+            <p>Aucun tag disponible</p>
+            )}
+  </div>
+    </div>
+        
 
         {/* Hôte et note */}
         <div className="hostRating">
           <div className="host">
-            <h3>{host.name}</h3>
+            <h3>
+              <span> {name[0]}</span>
+              <span> {name[1]}</span>
+
+            </h3>
             <img src={host.picture} alt={`Hôte: ${host.name}`} />
           </div>
           <div className="rating">
-            <Rating value={rating} />
+            <Rating rating={Number(rating) || 0} />
           </div>
         </div>
-
+</div>
         {/* Informations supplémentaires */}
         <div className="locationSideInfo">
           <Collaps title="Description">

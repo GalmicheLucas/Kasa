@@ -27,7 +27,7 @@
 		"tags": [
 			"Batignolle",
 			"Montmartre"
-		]
+		],
 	},
 	{
 		"id": "b9123946",

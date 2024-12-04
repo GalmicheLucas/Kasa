@@ -74,7 +74,7 @@
       color: #ff6060;
       font-weight: 500;
       font-size: 36px;
-      margin: 0px 100px;
+      margin: 0px 70px;
       @media screen and (max-width: 768px) {
         font-size: 26px;
       }
@@ -83,7 +83,7 @@
       color: black;
       font-weight: 500;
       font-size: 18px;
-      margin: 8px 0 25px 0;
+      margin: 8px 0 25px 80px;
       @media screen and (max-width: 768px) {
         font-size: 20px;
       }
@@ -133,16 +133,19 @@
     margin-bottom: 25px;
 
     h3 {
-      display: flex;
-      align-items: center;
+      
       font-weight: 500;
       font-size: 18px;
       color: #ff6060;
-      width: 35%;
+      
 
       @media screen and (max-width: 768px) {
         font-size: 19px;
       }
+    }
+
+    span {
+      display: flex;
     }
     img {
       border-radius: 50%;
@@ -175,9 +178,11 @@
       align-items: flex-start;
       margin-bottom: 50px;
   
+
+
       .headCollaps {
         width: 79%;
-        margin: 0 100px;
+        margin: 0 70px;
         
       }
       li {
@@ -191,7 +196,7 @@
         margin: 0;
       }
       .headCollapsContent {
-        margin: 15px 105px;
+        margin: 15px 70px;
       }
     }
   }
@@ -199,20 +204,23 @@
 
 
   
-
-
-
-  .tags {
-    background-color: #ff6060;
-    font-weight: 700;
-    font-size: 14px;
-    color: white;
-    padding: 5px 15px 5px 15px;
+  .tag {
+    display: inline-block;
     margin-right: 10px;
-    border-radius: 7px;
-    @media screen and (max-width: 768px) {
-      margin-bottom: 10px;
-    }
+    padding: 5px 10px;
+    background-color: #ff6b6b;
+    color: white;
+    border-radius: 15px;
+    font-size: 14px;
   }
+  
+  .tags {
+    margin:0 70px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+
 
  
