@@ -17,4 +17,8 @@ footer {
           font-size: 14px;
       }
     }
+
+    @media screen and (max-width:425px) {
+      height: 209px;
+    }
   }

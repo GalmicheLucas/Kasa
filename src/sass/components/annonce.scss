@@ -12,7 +12,10 @@
       object-fit: cover;
       filter: brightness(0.7); // Assombrir légèrement l'image pour faire ressortir le texte
 
-
+      @media screen and (max-width:425px) {
+        width: 335px;
+        height: 255px;
+      }
      
     }
   

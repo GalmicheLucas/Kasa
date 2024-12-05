@@ -10,7 +10,11 @@
     display: grid;
     place-items: center;
     border-radius: 15px;   
-    filter: brightness(0.5);
+
+    @media screen and (max-width: 425px) { 
+        width: 335px;
+        height: 111px;
+    }
 
 
 @media screen and (max-width: 1024px) {
@@ -22,21 +26,28 @@
 
 
  .banner p {
-    font-style: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem; /* Adaptez selon vos besoins */
     color: white;
-    position: absolute; /* Important pour que le z-index fonctionne */
-    z-index: 1; /* Devant */
+    z-index: 1; /* Devant le fond sombre */
+@media screen and (max-width: 425px) {
+    font-size: 26px;
+    margin-left: 20px;
+}
+    
+
+
 }
 
 
+
 .banner::after {
-    position: absolute;
-    border-radius: 15px;
     content: "";
+    position: absolute;
     inset: 0;
-    color: black;
-    opacity: 0.5;
-    z-index: 0; /* Derrière */
+    background: rgba(0, 0, 0, 0.5); /* Couche sombre */
+    border-radius: 15px;
+    z-index: 0; /* Derrière le texte */
 }
 
 
@@ -51,4 +62,8 @@
     width: 1240px;
     border-radius: 15px;
    
+    @media screen and (max-width: 425px) { 
+        width: 335px;
+        height: 111px;
+    }
 }

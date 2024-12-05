@@ -60,6 +60,10 @@
     .carouselImage {
       width: 90%;
       height: 415px;
+    @media screen and (max-width:768px) {
+      height: 355px;
+    }
+
     }
   }
   .locationTitlePlace {
@@ -77,6 +81,7 @@
       margin: 0px 70px;
       @media screen and (max-width: 768px) {
         font-size: 26px;
+        margin: 5px 20px;
       }
     }
     h3 {
@@ -86,6 +91,7 @@
       margin: 8px 0 25px 80px;
       @media screen and (max-width: 768px) {
         font-size: 20px;
+        margin: 5px 20px;
       }
     }
     .containerTags {
@@ -124,6 +130,7 @@
       flex-direction: row-reverse;
       align-items: center;
       justify-content: space-between;
+      margin: 0 20px;
     }
   }
   .host {
@@ -141,6 +148,7 @@
 
       @media screen and (max-width: 768px) {
         font-size: 19px;
+        margin-right: 10px;
       }
     }
 
@@ -173,17 +181,24 @@
       gap: 0;
     }
   
+   
+
     .collapsContent {
       width: 100%;
       align-items: flex-start;
       margin-bottom: 50px;
   
-
+      @media screen and (max-width:425px) {
+        margin-bottom: 20px;
+      }
 
       .headCollaps {
         width: 79%;
         margin: 0 70px;
-        
+      @media screen and (max-width:425px) {
+      margin: 5px 20px;
+      width: 90%;
+    }
       }
       li {
         list-style: none;
@@ -197,6 +212,10 @@
       }
       .headCollapsContent {
         margin: 15px 70px;
+        @media screen and (max-width:425px) {
+          margin: 5px 20px;
+        }
+        
       }
     }
   }
@@ -219,6 +238,11 @@
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+
+
+    @media screen and (max-width:768px) {
+      margin: 0 20px;
+    }
   }
   
 
