@@ -1,14 +1,15 @@
 .gallery {
-  
+  margin: 40px auto;
   gap: 30px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-color: #F6F6F6;
   border-radius: 25px;
   align-items: center;
-  margin: 40px 135px;
+  width: 95%;
 @media screen and (max-width: 425px) {
  background-color: unset;
  margin: unset;
@@ -20,7 +21,7 @@
 
 
 .annonce-card {
-  width: 31%;
+  width: 30%;
   position: relative;
 
   @media screen and (max-width: 1024px) {

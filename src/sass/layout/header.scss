@@ -1,10 +1,11 @@
 Header{
+    width: 95%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 30px 120px;
+    margin: 30px auto;
     @media screen and (max-width: 1024px) {
-       margin: 10px 45px;
+       margin: 10px 25px;
        }
 
 

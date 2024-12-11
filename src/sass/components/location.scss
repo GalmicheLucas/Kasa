@@ -22,7 +22,7 @@
       }
   
       .previous {
-        left: 100px;
+        left: 60px;
         @media screen and (max-width: 768px) {
           width: 30px;
           left: 55px;
@@ -34,7 +34,7 @@
       }
   
       .next {
-        right: 100px;
+        right: 60px;
         @media screen and (max-width: 768px) {
           width: 30px;
           right: 55px;
@@ -58,7 +58,7 @@
       object-fit: cover;
     }
     .carouselImage {
-      width: 90%;
+      width: 95%;
       height: 415px;
     @media screen and (max-width:768px) {
       height: 355px;
@@ -70,6 +70,7 @@
     display: flex;
     flex-direction: column;
     justify-content: end;
+  
     @media screen and (max-width: 768px) {
       left: 15px;
     }
@@ -78,7 +79,7 @@
       color: #ff6060;
       font-weight: 500;
       font-size: 36px;
-      margin: 0px 70px;
+      margin: 0 auto;
       @media screen and (max-width: 768px) {
         font-size: 26px;
         margin: 5px 20px;
@@ -88,7 +89,6 @@
       color: black;
       font-weight: 500;
       font-size: 18px;
-      margin: 8px 0 25px 80px;
       @media screen and (max-width: 768px) {
         font-size: 20px;
         margin: 5px 20px;
@@ -114,6 +114,8 @@
     align-items: end;
     padding-top: 25px;
     padding-bottom: 35px;
+    margin: 0 auto;
+    width: 95%;
     @media screen and (max-width: 768px) {
       display: block;
       padding-bottom: 0px;
@@ -125,7 +127,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: end;
-    margin: 0 100px;
+    
     @media screen and (max-width: 768px) {
       flex-direction: row-reverse;
       align-items: center;
@@ -175,7 +177,9 @@
     display: flex;
     gap: 70px;
     padding-right: 20px;
-  
+    margin: 0 auto;
+    width: 95%;
+
     @media screen and (max-width: 768px) {
       flex-direction: column;
       gap: 0;
@@ -184,7 +188,7 @@
    
 
     .collapsContent {
-      width: 100%;
+      width: 50%;
       align-items: flex-start;
       margin-bottom: 50px;
   
@@ -193,8 +197,7 @@
       }
 
       .headCollaps {
-        width: 79%;
-        margin: 0 70px;
+        width: 100%;
       @media screen and (max-width:425px) {
       margin: 5px 20px;
       width: 90%;
@@ -211,9 +214,9 @@
         margin: 0;
       }
       .headCollapsContent {
-        margin: 15px 70px;
+      
         @media screen and (max-width:425px) {
-          margin: 5px 20px;
+          margin: 5px 25px;
         }
         
       }
@@ -234,7 +237,6 @@
   }
   
   .tags {
-    margin:0 70px;
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
