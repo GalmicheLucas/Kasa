@@ -38,13 +38,14 @@
       font-family: "Montserrat";
          @media screen and (max-width: 425px) {
             width: 90%;
+            margin: 0;
          }
 
      &.open {
       max-height: 200px;
       transition: max-height 1s ease ; // Hauteur maximale avant de passer à une hauteur dynamique
          @media screen and (max-width: 425px) {
-            margin: 0 auto;
+            margin: 0 ;
          }
 
      }
