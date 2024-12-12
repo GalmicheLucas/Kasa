@@ -15,6 +15,7 @@
        align-items: center;
        @media screen and (max-width:425px) {
          width: 85%;
+         margin: 15px auto;
 }
    
        .arrow {
@@ -35,12 +36,16 @@
       max-height: 0; // Commence avec une hauteur minimale
       transition: max-height 315ms ease ;// Ajoute une transition pour l'effet de glissement
       font-family: "Montserrat";
-
+         @media screen and (max-width: 425px) {
+            width: 90%;
+         }
 
      &.open {
       max-height: 200px;
-      transition: max-height 1s ease // Hauteur maximale avant de passer à une hauteur dynamique
-
+      transition: max-height 1s ease ; // Hauteur maximale avant de passer à une hauteur dynamique
+         @media screen and (max-width: 425px) {
+            margin: 0 auto;
+         }
 
      }
     }
