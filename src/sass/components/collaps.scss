@@ -2,6 +2,9 @@
    
     max-width: 1000px;
     margin: 0 auto;
+    @media screen and (max-width:768px) {
+      width: 95%;
+    }
    
     .headCollaps {
        display: flex;
@@ -36,9 +39,9 @@
       max-height: 0; // Commence avec une hauteur minimale
       transition: max-height 315ms ease ;// Ajoute une transition pour l'effet de glissement
       font-family: "Montserrat";
-         @media screen and (max-width: 425px) {
-            width: 90%;
-            margin: 0 auto;
+         @media screen and (max-width: 768px) {
+            width: 95%;
+            margin: 15px auto;
          }
 
      &.open {

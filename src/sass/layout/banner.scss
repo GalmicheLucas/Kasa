@@ -1,6 +1,6 @@
 .banner {
+    max-width: 1440px;
     position: relative;
-
     background-image: url(../../images/home_cover.png); /* Remplacez par votre image */
     background-size: cover; /* Image couvre tout l'espace */
     background-position: center; /* Centre bien l'image */
@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 15px; /* Coins arrondis */
-    max-width: 95%;
+ 
 
     @media screen and (max-width: 425px) { 
         width: 335px; /* Largeur pour mobile */
@@ -52,9 +52,8 @@
 
 
 .banner-about{
-    position: relative;
-    max-width: 90%;
-    padding-inline: 0 32px;
+    max-width: 1440px;
+    position: relative; 
     background-image: url("../../images/about_cover.png");
     background-size: cover; /* Assure que l'image couvre tout l'espace */
     margin: auto;
@@ -62,9 +61,8 @@
     width: 95%;
     border-radius: 15px;
    
-    @media screen and (max-width: 425px) { 
-        width: 85%;
-        height: 111px;
+    @media screen and (max-width: 768px) { 
+    
         margin: 0 auto;
     }
 }

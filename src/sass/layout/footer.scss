@@ -6,6 +6,7 @@ footer {
     background-color: black;
     color: white;
     margin-top: auto;
+
     img {
       margin: 15px 0 15px 0;
     }
@@ -18,8 +19,8 @@ footer {
       }
     }
 
-    @media screen and (max-width:425px) {
+    @media screen and (max-width:768px) {
       margin-top: 10px;
-      height: 209px;
+      height: 220px;
     }
   }

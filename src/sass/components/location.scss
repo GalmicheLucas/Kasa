@@ -182,7 +182,7 @@
     @media screen and (max-width: 768px) {
       flex-direction: column;
       gap: 0;
-      padding: 0;
+      padding: unset;
     }
   
    
@@ -192,14 +192,14 @@
       align-items: flex-start;
       margin-bottom: 50px;
   
-      @media screen and (max-width:425px) {
+      @media screen and (max-width:768px) {
         margin-bottom: 20px;
-        width: 100%;
+        width: 95%;
       }
 
       .headCollaps {
         width: 100%;
-      @media screen and (max-width:425px) {
+      @media screen and (max-width:768px) {
       
       width: 95%;
     }
